@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffff" />
+    <title>Greenlight Planet - Case Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="./manifest.json" />
+
+    <script src="form.js" type="module" defer></script>
+    <script src="search.js" type="module" defer></script>
+    <script src="service-worker.js" defer></script>
+    <script src="index.js" type="module" defer></script>
+</head>
+
+<body>
+    <div class="modal">
+        <button class="modal-close-btn">
+            <svg width="22" height="22" viewBox="0 0 18 18" fill="none">
+                <path d="M1 17L17 1M17 17L1 1" stroke="#2c2c2c" stroke-linecap="round"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="backdrop"></div>
+    <header class="header">
+        <img src="./assets/logo.svg" alt="logo" class="logo">
+        <ul class="menu-lists">
+            <li class="menu-list-item"><a href="#about">About</a></li>
+            <li class="menu-list-item"><a href="#contact-us">Contact Us</a></li>
+            <li class="menu-list-item"><a href="#photos">Photos</a></li>
+        </ul>
+    </header>
+    <main class="main-container">
+        <section class="about-section" id="about">
+            <h1 class="company-name">Greenlight Planet</h1>
+            <p class="about-company">
+                Greenlight Planet is a for-profit social business that designs, distributes, and finances solar home
+                energy.
+            </p>
+            <svg class="scroll-indicator" width="10" height="43" viewBox="0 0 10 43" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 43L9.33013 35.5H0.669873L5 43ZM4.25 0L4.25 36.25H5.75L5.75 0L4.25 0Z" fill="#160B38" />
+            </svg>
+
+        </section>
+        <section class="contact-section" id="contact-us">
+            <h2 class="contact-heading">Contact Us</h2>
+            <p>Don't hesitate to contact us at contact@contact.com or call us at +91 9654734913.</p>
+            <button class="contact-btn">Let's Contact</button>
+        </section>
+        <section class="photos-section" id="photos">
+            <h2 class="photos-heading">Photos</h2>
+            <p>Search photos of anything.</p>
+            <input type="search" name="search" class="search" placeholder="Search">
+            <div class="photos-container"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a class="logo-link" href="/">
+            <img src="./assets/logo.svg" alt="logo" class="logo">
+        </a>
+        <p>&copy; 2021. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
