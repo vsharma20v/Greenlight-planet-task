@@ -13,7 +13,7 @@ const validateUserName = (userName) => {
   if (userName.includes(" ")) {
     return false;
   }
-  const specialCharacterRegex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  const specialCharacterRegex = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
   if (specialCharacterRegex.test(userName)) {
     return false;
   }
@@ -21,7 +21,7 @@ const validateUserName = (userName) => {
 };
 const validatePasswordAndResetPassword = (password, resetPassword) => {
   const passwordRegex = new RegExp(
-    "^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{10,}"
+    /^(?=.*[A-Z])(?=.*[@#$^!%*_?&])(?=.*[A-Za-zd@#$!^%_*?&]).{10,}$/
   );
   if (password.trim() === resetPassword.trim()) {
     return passwordRegex.test(password.trim());
